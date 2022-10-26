@@ -264,11 +264,14 @@ Explain your decision for choosing the above two research questions.
 
 <!--------------------------- Start your work below --------------------------->
 
-Reason: 1. I think the first one is an open-ended question instead of a
-simple yes-or-no one. Thus it has a lot to be discovered. 2. The second
-question involves a time variable ‘date_planted’ which others does not
-have.
-<!----------------------------------------------------------------------------->
+Reason:
+
+1.  I think the first one is an open-ended question instead of a simple
+    yes-or-no one. Thus it has a lot to be discovered.
+
+2.  The second question involves a time variable ‘date_planted’ which
+    others does not have.
+    <!----------------------------------------------------------------------------->
 
 Now, try to choose a version of your data that you think will be
 appropriate to answer these 2 questions. Use between 4 and 8 functions
@@ -403,8 +406,9 @@ answer
     ## #   ¹​genus_name, ²​species_name, ³​cultivar_name, ⁴​common_name, ⁵​assigned,
     ## #   ⁶​root_barrier, ⁷​plant_area, ⁸​on_street
 
-Explanation1: fct_infreq() is used here to order street_side by its
-frequency, from the least to the most.
+Explanation1: fct_infreq() is used here to order street_side factor by
+the frequency of its occurrence in a group hasCurb/noCurb, from the
+least to the most.
 
 ``` r
 ggplot(answer, aes(x = curb_occurrence, fill = street_side)) + 
@@ -416,8 +420,10 @@ ggplot(answer, aes(x = curb_occurrence, fill = street_side)) +
 
 ![](mini-project-2_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
-Explanation2: This diagram clears shows the total number of trees which
-occur on each side of street with and without a curb.
+Explanation2: After we use fct_infreq(), now this diagram orders the
+bars by their heights(i.e. count of trees), thus clearly shows the
+comparison between total numbers of trees which occur on each type of
+street side with and without a curb.
 <!----------------------------------------------------------------------------->
 
 <!-------------------------- Start your work below ---------------------------->
@@ -559,7 +565,8 @@ print(answer2.2)
     ##  9              19    85.5
     ## 10              20    90.0
 
-The .fitted column is the prediction for height_range_id\[11:20\].
+The .fitted column is the diamater prediction for
+height_range_id\[11:20\].
 <!----------------------------------------------------------------------------->
 
 # Task 4: Reading and writing data
